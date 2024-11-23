@@ -6,7 +6,7 @@ export default function Home() {
 
     // Fetch the user's IP address
     useEffect(() => {
-        fetch('http://localhost:9000/api/ip')
+        fetch('https://backend-ip.vercel.app/api/ip')
             .then((res) => res.json())
             .then((data) => setUserIp(data.ip))
             .catch((err) => console.error('Error fetching IP:', err));
@@ -14,7 +14,7 @@ export default function Home() {
 
     // Fetch the list of visitor IPs
     const fetchVisitors = () => {
-        fetch('http://localhost:9000/api/visitors')
+        fetch('https://backend-ip.vercel.app/api/visitors')
             .then((res) => res.json())
             .then((data) => setVisitorList(data))
             .catch((err) => console.error('Error fetching visitors:', err));
